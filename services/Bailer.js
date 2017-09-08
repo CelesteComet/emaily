@@ -1,5 +1,5 @@
 const keys = require('../config/keys');
-const domain = 'fast-oasis-98421.herokuapp.com';
+const domain = process.env.MAILGUN_DOMAIN;
 const mailgun = require('mailgun-js')({ apiKey: keys.mailGunKey, domain: domain});
 const axios = require('axios');
 
