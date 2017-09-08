@@ -1,5 +1,6 @@
 const keys = require('../config/keys');
-const domain = process.env.MAILGUN_DOMAIN;
+const domain = process.env.MAILGUN_DOMAIN || 'sandbox69e5d78673fd4bf09917f589412bfe22.mailgun.org';
+console.log(domain)
 const mailgun = require('mailgun-js')({ apiKey: keys.mailGunKey, domain: domain});
 const axios = require('axios');
 
